@@ -33,19 +33,15 @@ const getLinkStationsPowers = (linkStations, device) => {
 	if (!linkStations || !device) return;
 
 	return linkStations.map(station => {
-		const parsedLinkStation = parseLinkStationParameters(station);
+		const { x, y, reach } = parseLinkStationParameters(station);
 
-		const sideA = getSide(parsedLinkStation.x, device.x);
-		const sideB = getSide(parsedLinkStation.y, device.y);
+		const sideA = getSide(x, device.x);
+		const sideB = getSide(y, device.y);
 
 		const distance = pythagorean(sideA, sideB);
-		const power = Math.max(0, parsedLinkStation.reach - distance);
+		const power = Math.max(0, reach - distance);
 
-		return {
-			x: parsedLinkStation.x,
-			y: parsedLinkStation.y,
-			power: power
-		}
+		return { x, y, power };
 	});
 };
 
