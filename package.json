@@ -1,0 +1,22 @@
+{
+  "name": "nordcloud",
+  "version": "1.0.0",
+  "description": "assignment",
+  "main": "main.js",
+  "dependencies": {
+    "nodejs-cli": "^1.0.3",
+  },
+  "devDependencies": {
+    "nodemon": "^1.17.4",
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/mirkka/literate-doodle.git"
+  },
+  "author": "mirkka",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mirkka/literate-doodle/issues"
+  },
+  "homepage": "https://github.com/mirkka/literate-doodle#readme"
+}
