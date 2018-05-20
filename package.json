@@ -4,10 +4,10 @@
   "description": "assignment",
   "main": "main.js",
   "dependencies": {
-    "nodejs-cli": "^1.0.3",
+    "cli": "^1.0.1"
   },
   "devDependencies": {
-    "nodemon": "^1.17.4",
+    "nodemon": "^1.17.4"
   },
   "repository": {
     "type": "git",
