@@ -56,7 +56,14 @@ const printResult = (linkStations, device) => {
 	}
 };
 
-const linkStations = require(params.file);
+let linkStations;
 const device = parseDeviceCoords(params.point);
+
+try {
+	linkStations = require(params.file);
+} catch (err) {
+	console.log(`Failed to parse file ${params.file}`);
+	return;
+}
 
 printResult(linkStations, device);
